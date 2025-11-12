@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+main {
+  width: 100%;
+  padding: 0.5rem;
+  color: white;
+  background-color: black;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem 0.5rem;
+}
+
+.left img {
+  height: 40px;
+}
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  gap: 3rem;
+  display: none;
+}
+.right {
+  font-size: 2rem;
+  gap: 3rem;
+  display: none;
+}
+.menu {
+  font-size: 2rem;
+  gap: 3rem;
+  color: white;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  margin: 1rem;
+  gap: 1rem;
+  color: white;
+}
+
+.slider {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease;
+  object-fit: cover;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+button.prev:hover,
+button.next:hover {
+  background: white;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+.txt {
+  position: absolute;
+  top: 70%;
+  height: 5rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+  background-color: rgba(75, 72, 72, 0.455);
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+h4 {
+  font-size: 0.7em;
+}
+.txt div {
+  width: 50%;
+}
+.watchnow {
+  background-image: url(default-gradient.81cced3cb44e734ca94f.png);
+  width: 50%;
+  padding: 1rem;
+  font-size: 1rem;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  border-radius: 5px;
+}
+.scrollA {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  color: white;
+}
+.latestshow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  overflow: auto;
+}
+.latestshow::-webkit-scrollbar {
+  display: none;
+}
+.newshow img {
+  height: 280px;
+}
+.scrollB {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  color: white;
+}
+.scrollC {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.scrollD {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  color: white;
+}
+.language {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  overflow: auto;
+}
+.language::-webkit-scrollbar {
+  display: none;
+}
+.lang img {
+  height: 100px;
+}
+.scrollE {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  color: white;
+}
+.PopularGenre {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  overflow: auto;
+}
+.PopularGenre::-webkit-scrollbar {
+  display: none;
+}
+.footertop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.footertop h3 {
+  font-size: 1.3rem;
+}
+.footertop h6 {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: grey;
+}
+.footertop i {
+  font-size: 2rem;
+  color: grey;
+}
+
+.footerbottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+.bottomleft {
+  font-size: 0.9rem;
+  font-weight: 100;
+  color: grey;
+  color: rgb(96, 96, 192);
+}
+.bottomright {
+  display: flex;
+}
+.bottomright img {
+  height: 30px;
+}
+.mousefollower{
+  position: fixed;
+  transition: all 0.2s;
+  width: 10px;
+  height: 10px;
+  z-index: 99;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
