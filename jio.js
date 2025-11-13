@@ -1,9 +1,8 @@
-let slideindex = 0;
+let slideindex = -1;
 let slides = document.querySelectorAll(".slide");
 let prev = document.querySelector(".prev");
 let next = document.querySelector(".next");
 let middle = document.querySelector(".middle");
-
 
 function showslide(n) {
   slides.forEach(function (elem, idx) {
@@ -21,6 +20,17 @@ prev.addEventListener("click", function () {
   slideindex = (slideindex - 1 + slides.length) % slides.length;
   showslide(slideindex);
 });
+
+setInterval(() => {
+  if (slideindex <= 6) {
+    slideindex++;
+    showslide(slideindex);
+    console.log(slideindex);
+  }
+  if (slideindex == 6) {
+    slideindex = -1;
+  }
+}, 3000);
 
 var mousefollower = document.createElement("div");
 mousefollower.classList.add("mousefollower");
@@ -46,7 +56,6 @@ function isOverlapping(div1, div2) {
     rect1.top > rect2.bottom
   );
 }
-
 
 middle.addEventListener("mouseover", function (elem) {
   if (elem.target != middle) {
@@ -259,6 +268,7 @@ comedy.addEventListener("mouseout", function (det) {
 });
 
 let newshow = document.querySelectorAll(".newshow");
+let searchinput = document.querySelector(".searchinput");
 
 newshow.forEach((newshow) => {
   newshow.addEventListener("mouseover", function () {
@@ -278,10 +288,13 @@ newshow.forEach((newshow) => {
 let search1 = document.querySelector("#search1");
 
 search1.addEventListener("click", function () {
-  let searchdiv = document.createElement("input");
-  searchdiv.classList.add("searchinput");
-  search1.innerHTML = `<input type="text">`;
-//  middle.appendChild(searchdiv);
- searchdiv.style.backgroundColor = "white";
- search1.display = "none"
+  searchinput.style.display = "initial";
+  search1.style.display = "none";
+});
+
+let searchbtn = document.querySelector(".searchbtn");
+
+searchbtn.addEventListener("click", function () {
+  searchinput.style.display = "none";
+  search1.style.display = "initial";
 });
